@@ -30,7 +30,7 @@ const { Content } = await render(book)
     <div class="flex gap-12 p-20">
         <aside class="flex flex-col items-center gap-4">
             <a href="/" class="hover:underline opacity-70">← Volver atras</a>
-            <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`../src/assets/${img}`} alt={title}/>
+            <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title}/>
             
             <BookScore server:defer id={slug}>
                 <span slot="fallback" class="text-xs opacity-70">Cargando puntuación...</span>
