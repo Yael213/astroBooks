@@ -1,8 +1,8 @@
 ---
-title: Tokio Blues
+title: La broma asesina
 author: Haruki Murakami
-book_type: Libro
-img: 2b.jpg
+book_type: Comic
+img: 12b.jpg
 description: Toru Watanabe, un ejecutivo de 37 años, escucha casualmente mientras aterriza en un aeropuerto europeo una vieja canción de los beatles, y la música le hace retroceder a su juventud, al turbulento Tokio de finales de los sesenta.
 pages: 384
 buy:
