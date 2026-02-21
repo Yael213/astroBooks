@@ -1,6 +1,7 @@
 ---
 title: El perfume
 author: Patrick Süskind
+book_type: Libro
 img: 4b.jpg
 description: Un raro perfume que subyuga la voluntad de quien lo huele.
 pages: 240

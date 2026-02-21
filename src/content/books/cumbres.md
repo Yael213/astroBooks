@@ -1,8 +1,8 @@
 ---
-title: Meridiano de sangre
-author: Cormac McCarthy
+title: Guerra y paz
+author: Lev Tolstoi
 book_type: Libro
-img: 1b.jpg
+img: 8b.jpg
 description: Las autoridades mexicanas y del estado de Texas organizan una expedición paramilitar para acabar con el mayor número posible de indios.
 pages: 352
 buy:

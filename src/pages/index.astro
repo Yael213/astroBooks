@@ -9,39 +9,62 @@ export const prerender = true
 
 <Layout>
 	<main title="About" >
-        <h1 class="text-center bg-[#3E2F31] w-full py-20 text-7xl font-extrabold mb-24 text-white">
+        <h1 class="text-center bg-[#3E2F31] w-full py-10 text-7xl font-extrabold mb-24 text-white">
             Grandes novelas
         </h1>
 
 		<section aria-label="Obras maestras" class="pb-20">
 			<div class="mx-auto max-w-7xl">
-				<div class="grid gap-6 md:grid-cols-2">
+				<div class="flex items-center mb-4">
+					<h2 class="text-2xl font-bold mr-2">Libros</h2>
+					<div class="flex-1 border-b border-gray-500"></div>
+				</div>
+				<div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden mb-24">
 					{
 						books.map(book => {
-							const {slug, data} = book
-							const { title, author, img, description, pages, buy } = data
-
-							return (
-								<article class="flex">
-									<a href={`/libro/${slug}`} class="mb-2 xl:mb-0 transition hover:scale-110">
+						const { slug, data } = book
+						const { img } = data
+						const { book_type } = data
+						
+						return (
+							book_type === "Libro" && (
+								<article class="snap-center flex-shrink-0 py-5 px-2.5">
+									<a href={`/libro/${slug}`} class="block transition-transform duration-300 hover:scale-110">
 										<img 
 											transition:name={`img-${slug}`}
-											class="mr-5 w-60 rounded"
+											class="mr-5 h-96 rounded"
 											src={`/${img}`} 
-											alt="title" 
 										/>
-									</a>	
-
-									<div class="flex flex-col justify-center px-4">
-										<h2 transition:name={`title-${slug}`} class="mb-2 text-2xl font-bold leading-tight text-black">
-											{title}
-										</h2>
-
-										<p class="mb-4 text-gray-600 max-w-sm">{description}</p>
-										<span class="text-xs">Paginas: {pages}</span>
-									</div>
+									</a>
 								</article>
-							)
+							))
+						})
+					}
+				</div>
+
+				<div class="flex items-center mb-4">
+					<h2 class="text-2xl font-bold mr-2">Comics</h2>
+					<div class="flex-1 border-b border-gray-500"></div>
+				</div>
+				<div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden">
+					{
+						books.map(book => {
+						const { slug, data } = book
+						const { img } = data
+						const { book_type } = data
+						
+						return (
+							book_type === "Comic" && (
+								<article class="snap-center flex-shrink-0 py-5 px-2.5">
+									<a href={`/libro/${slug}`} class="block transition-transform duration-300 hover:scale-110">
+										<img 
+											transition:name={`img-${slug}`}
+											class="mr-5 h-96 rounded"
+											src={`/${img}`} 
+										/>
+									</a>
+								</article>
+							))
 						})
 					}
 				</div>

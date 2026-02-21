@@ -1,8 +1,8 @@
 ---
-title: 100 años de soledad
+title: Mr Miracle
 author: Gabriel García Marquez
-book_type: Libro
-img: 3b.jpg
+book_type: Comic
+img: 11b.jpg
 description: Cien años de soledad cuenta la saga de la familia Buendía y su maldición, que castiga el matrimonio entre parientes dándoles hijos con cola de cerdo.
 pages: 464
 buy:
